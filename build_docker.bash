@@ -9,3 +9,6 @@ docker build --rm -f "allennlp_transformers.Dockerfile" -t allennlp_transformers
 
 # 生成 Ubuntu + miniconda 的 Image, 名为 ubuntu_miniconda
 docker build --rm -f "ubuntu_miniconda.Dockerfile" -t ubuntu_miniconda:latest "."
+
+# 生成 PyLTP 的 Image, 名为 pyltp
+docker build --rm -f "pyltp.Dockerfile" -t pyltp:latest "."
