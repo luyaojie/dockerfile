@@ -1,4 +1,4 @@
-FROM cuda_anaconda:latest
+FROM cuda_miniconda:latest
 
 LABEL maintainer="Yaojie Lu <yaojie.lu@outlook.com>"
 
