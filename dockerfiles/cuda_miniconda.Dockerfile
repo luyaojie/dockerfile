@@ -2,6 +2,9 @@ FROM docker.io/nvidia/cuda:10.1-cudnn7-runtime
 
 LABEL maintainer="Yaojie Lu <yaojie.lu@outlook.com>"
 
+# 删除原有 apt 中和 CUDA 相关的 source，经常会连接不上
+RUN rm /etc/apt/sources.list.d/cuda.list /etc/apt/sources.list.d/nvidia-ml.list
+
 # 替换阿里云更新源
 COPY /source/ubuntu18.04_aliyun.source.list /etc/apt/sources.list
 
