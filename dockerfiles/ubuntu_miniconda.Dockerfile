@@ -26,7 +26,8 @@ RUN wget -nv --no-check-certificate https://mirrors.tuna.tsinghua.edu.cn/anacond
 
 ENV PATH /opt/conda/bin:${PATH}
 
-RUN pip config set global.index-url http://mirrors.aliyun.com/pypi/simple
+RUN pip config set global.index-url http://mirrors.aliyun.com/pypi/simple && \
+    pip config set global.trusted-host mirrors.aliyun.com
 
 RUN pip install --upgrade pip && \
     pip install torch torchvision
