@@ -19,10 +19,13 @@ RUN apt-get update --fix-missing && apt-get install -y \
     --no-install-recommends
 
 # 安装 miniconda
-RUN wget --no-check-certificate https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
+RUN wget -nv --no-check-certificate https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
     /bin/bash Miniconda3-latest-Linux-x86_64.sh -b -p /opt/conda && \
     rm Miniconda3-latest-Linux-x86_64.sh
 
 ENV PATH /opt/conda/bin:${PATH}
 
-RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+RUN pip config set global.index-url http://mirrors.aliyun.com/pypi/simple
+
+RUN pip install --upgrade pip && \
+    pip install torch torchvision
