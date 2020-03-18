@@ -19,6 +19,7 @@ RUN apt-get update --fix-missing && apt-get install -y \
     vim \
     unzip \
     unrar \
+    openssh-server \
     --no-install-recommends
 
 # 安装 miniconda
@@ -33,4 +34,3 @@ RUN pip config set global.index-url http://mirrors.aliyun.com/pypi/simple
 RUN pip install --upgrade pip && \
     pip install torch torchvision && \
     pip install gpustat
-

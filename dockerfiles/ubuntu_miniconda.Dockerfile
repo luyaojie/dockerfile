@@ -16,6 +16,7 @@ RUN apt-get update --fix-missing && apt-get install -y \
     vim \
     unzip \
     unrar \
+    openssh-server \
     --no-install-recommends
 
 # 安装 miniconda
