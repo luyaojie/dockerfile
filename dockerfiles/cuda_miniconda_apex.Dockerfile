@@ -1,4 +1,4 @@
-FROM docker.io/nvidia/cuda:10.1-cudnn7-runtime
+FROM docker.io/nvidia/cuda:10.1-cudnn7-devel
 
 LABEL maintainer="Yaojie Lu <yaojie.lu@outlook.com>"
 
