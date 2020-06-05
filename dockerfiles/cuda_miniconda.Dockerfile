@@ -20,6 +20,7 @@ RUN apt-get update --fix-missing && apt-get install -y \
     unzip \
     unrar \
     openssh-server \
+    psmisc \
     --no-install-recommends
 
 # 安装 miniconda
@@ -34,4 +35,5 @@ RUN pip config set global.index-url https://mirrors.aliyun.com/pypi/simple && \
 
 RUN pip install --upgrade pip && \
     pip install torch torchvision && \
-    pip install gpustat
+    pip install gpustat && \
+    pip install ipython
